@@ -28,23 +28,36 @@
       </section>
     </main>
     <script> 
-      let count = 0;
-      count = count++;
-      const form = document.querySelector('.hello-world-form');
+    
+      let count = 0;           
+      const form = document.querySelector('.hello-world-form');  
       
       form.addEventListener('submit', (e) => {
         e.preventDefault();
+       // 코드 작성 !!
+        // count 증가 ! (console.log 로 증가되는것 확인)
+        count++;
 
+        //결과를 화면에 반영
+        const result = document.querySelector('#count');
+        result.innerText = count;
+       
         if (e.target[0].value === 'Hello World!') {
+          
           document.querySelector('.welcome').style.display = 'block';
           document.querySelector('.again').style.display = 'none';
           
         } else {
-
+          
           document.querySelector('.again').style.display = 'block';
           document.querySelector('.welcome').style.display = 'none';
         }
       });
+
+
+
+      
+      
     </script>
   </body>
 </html>
